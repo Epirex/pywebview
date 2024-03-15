@@ -36,7 +36,7 @@ def close_first_three_windows():
 
 if __name__ == '__main__':
     # Abrir pantallas de inicio
-    url = 'http://supranet.ar/muestra/urls.txt'
+    url = 'http://supranet.ar/muestra/urls-primer-inicio.txt'
     response = requests.get(url)
 
     if response.status_code == 200:
@@ -77,7 +77,7 @@ if __name__ == '__main__':
         keyboard.add_hotkey('1', load_urls1)
         keyboard.add_hotkey('2', load_urls2)
         keyboard.add_hotkey('3', load_urls3)
-        keyboard.add_hotkey('4', close_first_three_windows)  # En caso de emergencia
+        keyboard.add_hotkey('esc', close_first_three_windows)
 
         webview.start()
     else:
